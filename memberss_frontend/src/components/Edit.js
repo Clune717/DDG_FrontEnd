@@ -15,7 +15,7 @@ const Edit = (props) => {
   
 
   return (
-    <>
+    <body className='bg-blue-300'>
       <details>
         <summary>Edit Member</summary>
     
@@ -23,10 +23,8 @@ const Edit = (props) => {
         <label htmlFor="name">User Name: </label>
         <input type="text" value={member.name} name="name" onChange={handleChange} />
         <br />
-        <br />
         <label htmlFor="age">Age: </label>
         <input type="number" value={member.age} name="age" onChange={handleChange} />
-        <br />
         <br />
         <label htmlFor="email">Email: </label>
         <input type="email" value={member.email} name="email" onChange={handleChange} />
@@ -34,7 +32,7 @@ const Edit = (props) => {
       </form>
     
       </details>
-    </>
+    </body>
   )
 }
 

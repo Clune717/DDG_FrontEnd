@@ -16,7 +16,7 @@ const Add = (props) => {
   
   
   return (
-    <>
+    <div className='backdrop-blur-md bg-white/30'>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">User Name: </label>
         <input type="text" value={member.name} name="name" onChange={handleChange} />
@@ -30,7 +30,7 @@ const Add = (props) => {
         <input type="email" value={member.email} name="email" onChange={handleChange} />
         <input type="submit"/>
       </form>
-    </>
+    </div>
   )
 }
 
