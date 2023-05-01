@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
-//only need props as a param if we are passing in props to this component (we are going to here).
-const Add = (props) => {
+const Edit = (props) => {
   let emptyMember = { name: '', age: '', email:'', }
   const [member, setMember] = useState(emptyMember)
 
@@ -14,9 +13,12 @@ const Add = (props) => {
     props.handleCreate(member)
   }
   
-  
+
   return (
     <>
+      <details>
+        <summary>Edit Member</summary>
+    
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">User Name: </label>
         <input type="text" value={member.name} name="name" onChange={handleChange} />
@@ -30,8 +32,10 @@ const Add = (props) => {
         <input type="email" value={member.email} name="email" onChange={handleChange} />
         <input type="submit"/>
       </form>
+    
+      </details>
     </>
   )
 }
 
-export default Add
+export default Edit
